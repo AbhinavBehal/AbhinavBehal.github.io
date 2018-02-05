@@ -20,9 +20,23 @@ h1 {
 
 a {
 	color: #f3ffa8;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	text-decoration: none;
 	text-align: center;
+	display: inline-block;
+}
+
+a:after {
+	display: block;
+	content: '';
+	border-bottom: solid 2px #f3ffa8;
+	transform: scaleX(0);
+	transform-origin: 0% 50%;
+	transition: transform 0.2s ease-in-out;
+}
+
+a:hover:after {
+	transform: scaleX(1);
 }
 
 ul {
@@ -33,13 +47,6 @@ li {
 	display: inline;
 	margin-right: 0.5em;
 	padding: 0.2em;
-	border: 2px solid transparent;
-	border-width: 0 0 2px 0;
-	transition: border-color 0.2s ease-in-out;
-}
-
-li:hover {
-	border-color: #f3ffa8;
 }
 
 .container {
@@ -52,4 +59,10 @@ li:hover {
 	border: 2px solid #f3ffa8;
 	border-left-width: 0;
 	border-right-width: 0;
+}
+
+.contact-info > i {
+	color: #f3ffa8;
+	font-size: 1.5em;
+	padding: 0.5em;
 }
