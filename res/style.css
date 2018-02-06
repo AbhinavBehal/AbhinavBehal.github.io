@@ -9,20 +9,25 @@ html, body {
 	height: 100%;
 }
 
+:root {
+	--foreground-color: #e6e98e;
+	--background-color: #c62326;
+}
+
 body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #103063;
+	background-color: var(--background-color);
 }
 
 h1 {
-	color: #f3ffa8;
+	color: var(--foreground-color);
 	font-size: 4em;
 }
 
 a {
-	color: #f3ffa8;
+	color: var(--foreground-color);
 	font-size: 1.2em;
 	text-decoration: none;
 	text-align: center;
@@ -32,7 +37,7 @@ a {
 a:after {
 	display: block;
 	content: '';
-	border-bottom: solid 2px #f3ffa8;
+	border-bottom: solid 2px var(--foreground-color);
 	transform: scaleX(0);
 	transform-origin: 0% 50%;
 	transition: transform 0.2s ease-in-out;
@@ -65,8 +70,7 @@ li {
 	padding: 0;
 	margin-bottom: 1em;
 	content: '';
-	border-top: solid 2px #f3ffa8;
-	transform: scaleX(1);
+	border-top: solid 2px var(--foreground-color);
 	animation: 0.75s ease-in-out slideInFromRight;
 }
 
@@ -75,8 +79,7 @@ li {
 	padding: 0;
 	margin-top: 1em;
 	content: '';
-	border-bottom: solid 2px #f3ffa8;
-	transform: scaleX(1);
+	border-bottom: solid 2px var(--foreground-color);
 	animation: 0.75s ease-in-out slideInFromLeft;
 }
 
@@ -99,7 +102,7 @@ li {
 }
 
 .contact-info > i {
-	color: #f3ffa8;
+	color: var(--foreground-color);
 	font-size: 1.5em;
 	padding: 0.5em;
 }
